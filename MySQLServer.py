@@ -10,7 +10,7 @@ try:
     cursor = myalxdb.cursor()
     cursor.execute("""CREATE DATABASE IF NOT EXISTS alx_book_store""")
     print("Database 'alx_book_store' created successfully!")
-except myalxdb.connector.Error:
+except mysql.connector.Error:
     print("Unable to connect to Database!")
 finally:
     cursor.close()
